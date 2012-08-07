@@ -33,6 +33,7 @@ function defineSettings()
  item2emc=8192
  item3emc=18432
  cable="back"
+ slowmode=false
 end
 
 function itemStats()
@@ -48,24 +49,32 @@ function cleanUp()
  term.setCursorPos(1,1)
 end
 
+function slowmodeWait()
+ if slowmode then
+  sleep(2)
+  else
+  sleep(1)
+ end
+end
+
 function  reqItem1()
  print("Sending " .. item1 .. " your way!")
  redstone.setBundledOutput(cable, colors.blue)
- sleep(2)
+ slowmodeWait()
  redstone.setBundledOutput(cable, 0)
 end
 
 function reqItem2()
  print("Sending " .. item2 .. " your way!")
  redstone.setBundledOutput(cable, colors.white)
- sleep(2)
+ slowmodeWait()
  redstone.setBundledOutput(cable, 0)
 end
 
 function reqItem3()
  print("Sending " .. item3 .. " your way!")
  redstone.setBundledOutput(cable, colors.red)
- sleep(2)
+ slowmodeWait()
  redstone.setBundledOutput(cable, 0)
 end
 
@@ -96,7 +105,12 @@ function menu()
  while true do 
   printMenu()
   menuVerwerking()
-  sleep(5)
+  
+  if slowmode then
+	sleep(5)
+	else
+	sleep(1)
+   end
   term.clear()
   term.setCursorPos(1,1)
  end 
