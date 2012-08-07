@@ -71,18 +71,18 @@ end
 
 
 function printMenu()
- print("1. Request " .. item1 .. item1emc .. " EMC")
- print("2. Request " .. item2 .. item2emc .. " EMC")
- print("3. Request " .. item3 .. item3emc .. " EMC")
+ print("1. Request " .. item1 .. " " .. item1emc .. " EMC")
+ print("2. Request " .. item2 .. " " .. item2emc .. " EMC")
+ print("3. Request " .. item3 .. " " .. item3emc .. " EMC")
 end
 
 function menuVerwerking()
  keuze = read()
- if keuze == 1 then
+ if keuze == "1" then
   reqItem1()
- elseif keuze == 2 then
+ elseif keuze == "2" then
   reqItem2()
- elseif keuze == 3 then  
+ elseif keuze == "3" then  
    reqItem3()
  elseif keuze == "kiwi" then
  exit()
