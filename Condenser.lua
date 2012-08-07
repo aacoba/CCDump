@@ -1,4 +1,4 @@
---one line to give the program's name and an idea of what it does.
+--Overengineered Button to use at our condenser :)
 --Copyright (C) 2012  Auke Bakker
 --
 --This program is free software; you can redistribute it and/or
@@ -50,7 +50,7 @@ end
 
 function  reqItem1()
  print("Sending " .. item1 .. " your way!")
- redstone.setBundledOutput(cable, colors.white)
+ redstone.setBundledOutput(cable, colors.blue)
  sleep(2)
  redstone.setBundledOutput(cable, 0)
 end
