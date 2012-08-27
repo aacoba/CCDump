@@ -15,7 +15,7 @@
 --along with this program; if not, write to the Free Software
 --Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
-__name__="Github pull"
+__name__="GitGet"
 __version__="0.1"
 __author__="aacoba"
 
